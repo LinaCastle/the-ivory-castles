@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ivory Castles</title>
+    <style>
+        body {
+            background-color: #3A0F17;
+            color: #FDFBF7;
+            font-family: 'Garamond', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            width: 100%;
+        }
+        header h1 {
+            color: #DDBA6B;
+            font-size: 3rem;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin: 10px 0 0 0;
+            color: #C5A059;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 90%;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .column {
+            flex: 1;
+            background-color: #FDFBF7;
+            color: #3A0F17;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #C5A059;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .column h2 {
+            font-family: 'Playfair Display', serif;
+            color: #3A0F17;
+            margin-top: 0;
+            font-size: 2.2rem;
+            text-align: center;
+            border-bottom: 2px solid #C5A059;
+            padding-bottom: 10px;
+        }
+        .column h3 {
+            text-align: center;
+            font-style: italic;
+            color: #8B4F58;
+            margin-top: -5px;
+        }
+        .content-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .image-box {
+            width: 100%;
+            border: 1px solid #C5A059;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            background-color: #eee;
+            text-align: center;
+            overflow: hidden;
+        }
+        .image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .placeholder-text {
+            padding: 40px 20px;
+            color: #666;
+            font-style: italic;
+        }
+        .audio-box {
+            background: #3A0F17;
+            color: #FDFBF7;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid #DDBA6B;
+        }
+        .newsletter {
+            max-width: 1200px;
+            width: 90%;
+            background-color: #FDFBF7;
+            color: #3A0F17;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #C5A059;
+            text-align: center;
+            margin-bottom: 40px;
+            box-sizing: border-box;
+        }
+        .newsletter h2 {
+            font-family: 'Playfair Display', serif;
+            margin-top: 0;
+            color: #3A0F17;
+        }
+        .newsletter input[type="email"] {
+            padding: 12px;
+            width: 60%;
+            max-width: 400px;
+            border: 1px solid #C5A059;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .newsletter button {
+            padding: 12px 24px;
+            background-color: #3A0F17;
+            color: #DDBA6B;
+            border: 1px solid #C5A059;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        footer {
+            padding: 30px;
+            text-align: center;
+            color: #DDBA6B;
+            width: 100%;
+        }
+        footer a {
+            color: #FDFBF7;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>THE IVORY CASTLES</h1>
+        <p>The Creative World of Lina & Calliope Castle</p>
+    </header>
+
+    <div class="container">
+        <!-- LINA CASTLE -->
+        <div class="column">
+            <div>
+                <h2>Lina Castle</h2>
+                <h3>The Order of Romance</h3>
+                <p class="content-text">Home of the Order of Romance podcast, blog, and vlog. Highlighting the upcoming book "Order of Romance: Chivalry, Charm & Chase".</p>
+            </div>
+            <div>
+                <div class="image-box">
+                    <div class="placeholder-text">[The Order of Romance Floral Title Card Graphic]</div>
+                </div>
+                <div class="image-box">
+                    <div class="placeholder-text">[Recording Studio Suite Photo with Chairs]</div>
+                </div>
+                <div class="audio-box">
+                    <strong>Listen to Ambient Melodies</strong><br>
+                    <small>Royalty Free Ambient Track by Pardeep Patel</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- CALLIOPE CASTLE -->
+        <div class="column">
+            <div>
+                <h2>Calliope Castle</h2>
+                <h3>Historical Romantasy Fiction</h3>
+                <p class="content-text">An upcoming new author for the "Malbec Book Series" and the upcoming "Fallen Feather" fantasy fiction series.</p>
+            </div>
+            <div>
+                <div class="image-box">
+                    <div class="placeholder-text">[Malbec Sunsets Book Cover Graphic]</div>
+                </div>
+                <div class="image-box" style="padding: 60px 0;">
+                    <strong>Featured Book Trailer Teaser</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h2>Join the Inner Circle</h2>
+        <p>Receive first word of book cover reveals and exquisite chapter logs.</p>
+        <input type="email" placeholder="Your Email Address...">
+        <button>SUBSCRIBE</button>
+    </div>
+
+    <footer>
+        <a href="#">TikTok</a> · <a href="#">Instagram</a> · <a href="#">Goodreads</a>
+        <p style="margin-top: 20px; color: #666; font-size: 0.9rem;">&copy; 2026 THE IVORY CASTLES · ALL RIGHTS RESERVED</p>
+    </footer>
+
+</body>
+</html>
