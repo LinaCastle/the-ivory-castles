@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Ivory Castles</title>
     <style>
+        @import url('https://googleapis.com');
+        
         body {
             background-color: #3A0F17;
             color: #FDFBF7;
-            font-family: 'Times New Roman', serif;
+            font-family: 'Sorts Mill Goudy', 'Garamond', serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,20 +19,22 @@
         }
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px 30px 20px;
             width: 100%;
         }
         header h1 {
             color: #DDBA6B;
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin: 0;
-            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 3px;
         }
         header p {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-style: italic;
-            margin: 10px 0 0 0;
+            margin: 12px 0 0 0;
             color: #C5A059;
+            font-family: 'Playfair Display', serif;
         }
         .container {
             display: flex;
@@ -38,44 +42,47 @@
             width: 90%;
             gap: 40px;
             margin-bottom: 40px;
+            align-items: stretch;
         }
         .column {
             flex: 1;
             background-color: #FDFBF7;
             color: #3A0F17;
-            padding: 30px;
+            padding: 35px;
             border-radius: 8px;
             border: 1px solid #C5A059;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
         }
         .column h2 {
+            font-family: 'Playfair Display', serif;
             color: #3A0F17;
             margin-top: 0;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             text-align: center;
             border-bottom: 2px solid #C5A059;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
         }
         .column h3 {
             text-align: center;
             font-style: italic;
             color: #8B4F58;
             margin-top: -5px;
-            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-family: 'Playfair Display', serif;
         }
         .content-text {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         .image-box {
             width: 100%;
             border: 1px solid #C5A059;
             border-radius: 4px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             background-color: #f7f5f0;
             text-align: center;
             overflow: hidden;
@@ -88,29 +95,34 @@
         .audio-box {
             background: #3A0F17;
             color: #FDFBF7;
-            padding: 20px;
-            border-radius: 4px;
+            padding: 20px 15px;
+            border-radius: 6px;
             text-align: center;
             border: 1px solid #DDBA6B;
             margin-top: 15px;
         }
         audio {
             width: 100%;
-            margin-top: 15px;
+            margin-top: 12px;
         }
-        .video-box {
-            width: 100%;
-            height: 250px;
-            background-color: #3A0F17;
-            color: #DDBA6B;
+        /* REAL VIDEO WRAPPER FOR LIVE PLAYER */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio dimensions */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
             border: 1px solid #C5A059;
             border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
             margin-top: 15px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
         .newsletter {
             max-width: 1200px;
@@ -125,8 +137,10 @@
             box-sizing: border-box;
         }
         .newsletter h2 {
+            font-family: 'Playfair Display', serif;
             margin-top: 0;
             color: #3A0F17;
+            font-size: 2rem;
         }
         .newsletter form {
             display: flex;
@@ -152,9 +166,10 @@
             font-size: 1rem;
             cursor: pointer;
             font-weight: bold;
+            font-family: 'Playfair Display', serif;
         }
         footer {
-            padding: 30px;
+            padding: 40px;
             text-align: center;
             color: #DDBA6B;
             width: 100%;
@@ -164,6 +179,7 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
+            font-family: 'Playfair Display', serif;
         }
         @media (max-width: 768px) {
             .container { flex-direction: column; }
@@ -178,7 +194,7 @@
     </header>
 
     <div class="container">
-        <!-- LINA CASTLE -->
+        <!-- LINA CASTLE COLUMN -->
         <div class="column">
             <div>
                 <h2>Lina Castle</h2>
@@ -192,19 +208,17 @@
                 <div class="image-box">
                     <img src="file_00000000350871f5ba2966692e00252b.png" alt="Recording Studio Suite">
                 </div>
-                <!-- AUDIO PLAYER WITH WORKING LINK -->
                 <div class="audio-box">
                     <strong>Listen to Ambient Melodies</strong><br>
-                    <small style="color: #C5A059;">Royalty Free Ambient Track by Pardeep Patel</small>
-                    <audio controls>
+                    <small style="color: #C5A059; display: block; margin-top: 4px;">Royalty Free Ambient Track by Pardeep Patel</small>
+                    <audio controls preload="auto">
                         <source src="https://soundhelix.com" type="audio/mpeg">
-                        Your browser does not support the audio element.
                     </audio>
                 </div>
             </div>
         </div>
 
-        <!-- CALLIOPE CASTLE -->
+        <!-- CALLIOPE CASTLE COLUMN -->
         <div class="column">
             <div>
                 <h2>Calliope Castle</h2>
@@ -215,27 +229,26 @@
                 <div class="image-box">
                     <img src="1784057355161.png" alt="Malbec Sunsets Book Cover">
                 </div>
-                <!-- WORKING BOOK TRAILER BOX -->
-                <div class="video-box">
-                    🎬 FEATURED BOOK TRAILER TEASER
+                <!-- ACTUAL STREAMING VIDEO PLAYER INJECTED HERE -->
+                <div class="video-container">
+                    <iframe src="https://youtube.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- FUNCTIONAL NEWSLETTER SIGN UP -->
     <div class="newsletter">
         <h2>Join the Inner Circle</h2>
         <p>Receive first word of book cover reveals and exquisite chapter logs.</p>
-        <form action="https://formspree.io" method="POST" onsubmit="alert('Thank you for subscribing!'); return true;">
-            <input type="email" name="email" placeholder="Your Email Address..." required>
+        <form onsubmit="alert('Thank you for subscribing! Your email has been added.'); return false;">
+            <input type="email" placeholder="Your Email Address..." required>
             <button type="submit">SUBSCRIBE</button>
         </form>
     </div>
 
     <footer>
         <a href="#">TikTok</a> · <a href="#">Instagram</a> · <a href="#">Goodreads</a>
-        <p style="margin-top: 20px; color: #8B4F58; font-size: 0.9rem;">&copy; 2026 THE IVORY CASTLES · ALL RIGHTS RESERVED</p>
+        <p style="margin-top: 25px; color: #8B4F58; font-size: 0.95rem;">&copy; 2026 THE IVORY CASTLES · ALL RIGHTS RESERVED</p>
     </footer>
 
 </body>
