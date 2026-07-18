@@ -101,28 +101,22 @@
             border: 1px solid #DDBA6B;
             margin-top: 15px;
         }
-        audio {
+        .audio-box strong {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #DDBA6B;
+        }
+        audio, video {
             width: 100%;
             margin-top: 12px;
+            border-radius: 4px;
         }
-        /* REAL VIDEO WRAPPER FOR LIVE PLAYER */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio dimensions */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
+        .video-box {
+            margin-top: 15px;
             border: 1px solid #C5A059;
             border-radius: 4px;
-            margin-top: 15px;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            overflow: hidden;
+            background: #000;
         }
         .newsletter {
             max-width: 1200px;
@@ -208,11 +202,12 @@
                 <div class="image-box">
                     <img src="file_00000000350871f5ba2966692e00252b.png" alt="Recording Studio Suite">
                 </div>
+                <!-- AUDIO PLAYER LINKED NATIVELY -->
                 <div class="audio-box">
                     <strong>Listen to Ambient Melodies</strong><br>
-                    <small style="color: #C5A059; display: block; margin-top: 4px;">Royalty Free Ambient Track by Pardeep Patel</small>
+                    <small style="color: #C5A059; display: block; margin-top: 4px;">Vol 2 Whispers of Love by Pardeep Patel</small>
                     <audio controls preload="auto">
-                        <source src="https://soundhelix.com" type="audio/mpeg">
+                        <source src="pardeeppatel-vol-2-whispers-of-love-288073 (1).mp3" type="audio/mpeg">
                     </audio>
                 </div>
             </div>
@@ -229,18 +224,21 @@
                 <div class="image-box">
                     <img src="1784057355161.png" alt="Malbec Sunsets Book Cover">
                 </div>
-                <!-- ACTUAL STREAMING VIDEO PLAYER INJECTED HERE -->
-                <div class="video-container">
-                    <iframe src="https://youtube.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- VIDEO PLAYER LINKED NATIVELY -->
+                <div class="video-box">
+                    <video controls preload="metadata" poster="1784057355161.png">
+                        <source src="malbec.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- RESPONSIVE LOCAL NEWSLETTER FORM -->
     <div class="newsletter">
         <h2>Join the Inner Circle</h2>
         <p>Receive first word of book cover reveals and exquisite chapter logs.</p>
-        <form onsubmit="alert('Thank you for subscribing! Your email has been added.'); return false;">
+        <form onsubmit="alert('Thank you for subscribing! Your email address has been added to our launching queue.'); this.reset(); return false;">
             <input type="email" placeholder="Your Email Address..." required>
             <button type="submit">SUBSCRIBE</button>
         </form>
