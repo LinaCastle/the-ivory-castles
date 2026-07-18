@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Ivory Castles</title>
-    <!-- Imports Elegant Historical Serif Fonts Directly -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Forces the premium elegant historical fonts to load -->
     <style>
+        @import url('https://googleapis.com');
+        
         body {
             background-color: #3A0F17;
             color: #FDFBF7;
@@ -219,12 +218,12 @@
                 <div class="image-box">
                     <img src="file_00000000350871f5ba2966692e00252b.png" alt="Recording Studio Suite">
                 </div>
-                <!-- Restored Music Player Track Box -->
+                <!-- Active Music Player Track Box with Sample Stream Link -->
                 <div class="audio-box">
                     <strong>Listen to Ambient Melodies</strong><br>
                     <small style="color: #C5A059; display: block; margin-top: 4px;">Royalty Free Ambient Track by Pardeep Patel</small>
                     <audio controls style="display: block;">
-                        <source src="track.mp3" type="audio/mpeg">
+                        <source src="https://soundhelix.com" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -265,3 +264,4 @@
 
 </body>
 </html>
+
