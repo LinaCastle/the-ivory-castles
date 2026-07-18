@@ -202,7 +202,6 @@
                 <div class="image-box">
                     <img src="file_00000000350871f5ba2966692e00252b.png" alt="Recording Studio Suite">
                 </div>
-                <!-- AUDIO PLAYER LINKED NATIVELY -->
                 <div class="audio-box">
                     <strong>Listen to Ambient Melodies</strong><br>
                     <small style="color: #C5A059; display: block; margin-top: 4px;">Vol 2 Whispers of Love by Pardeep Patel</small>
@@ -224,7 +223,6 @@
                 <div class="image-box">
                     <img src="1784057355161.png" alt="Malbec Sunsets Book Cover">
                 </div>
-                <!-- VIDEO PLAYER LINKED NATIVELY -->
                 <div class="video-box">
                     <video controls preload="metadata" poster="1784057355161.png">
                         <source src="malbec.mp4" type="video/mp4">
@@ -234,12 +232,12 @@
         </div>
     </div>
 
-    <!-- RESPONSIVE LOCAL NEWSLETTER FORM -->
+    <!-- NEWSLETTER LINKED TO FORMSPREE EMAIL ROUTER -->
     <div class="newsletter">
         <h2>Join the Inner Circle</h2>
         <p>Receive first word of book cover reveals and exquisite chapter logs.</p>
-        <form onsubmit="alert('Thank you for subscribing! Your email address has been added to our launching queue.'); this.reset(); return false;">
-            <input type="email" placeholder="Your Email Address..." required>
+        <form action="https://formspree.io" method="POST">
+            <input type="email" name="email" placeholder="Your Email Address..." required>
             <button type="submit">SUBSCRIBE</button>
         </form>
     </div>
