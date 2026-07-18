@@ -44,7 +44,7 @@
             flex: 1;
             background-color: #FDFBF7;
             color: #3A0F17;
-            padding: 40px 30px;
+            padding: 30px;
             border-radius: 8px;
             border: 1px solid #C5A059;
             display: flex;
@@ -66,35 +66,34 @@
             font-style: italic;
             color: #8B4F58;
             margin-top: -5px;
-            margin-bottom: 25px;
         }
         .content-text {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             line-height: 1.6;
-            margin-bottom: 30px;
-            text-align: justify;
+            margin-bottom: 20px;
         }
-        .feature-block {
+        .image-box {
             width: 100%;
             border: 1px solid #C5A059;
             border-radius: 4px;
-            margin-top: 20px;
-            padding: 30px 15px;
-            background-color: #3A0F17;
-            color: #DDBA6B;
-            font-weight: bold;
+            margin-bottom: 15px;
+            background-color: #f7f5f0;
             text-align: center;
-            box-sizing: border-box;
-            letter-spacing: 1px;
+            overflow: hidden;
+        }
+        .image-box img {
+            width: 100%;
+            display: block;
+            height: auto;
         }
         .audio-box {
-            background: #8B4F58;
+            background: #3A0F17;
             color: #FDFBF7;
-            padding: 20px;
+            padding: 15px;
             border-radius: 4px;
             text-align: center;
-            border: 1px solid #C5A059;
-            margin-top: 20px;
+            border: 1px solid #DDBA6B;
+            margin-top: 10px;
         }
         .newsletter {
             max-width: 1200px;
@@ -165,8 +164,13 @@
                 <p class="content-text">Home of the Order of Romance podcast, blog, and vlog. Highlighting the upcoming book "Order of Romance: Chivalry, Charm & Chase". Dedicated to exploring timeless tropes, storytelling craft, and the ultimate creative journey.</p>
             </div>
             <div>
-                <div class="feature-block">
-                    🎙️ OFFICIAL PODCAST STUDIO PREVIEW INCOMING
+                <!-- Slot 1: Floral Title Card -->
+                <div class="image-box">
+                    <img src="card.jpg" alt="The Order of Romance Title Card">
+                </div>
+                <!-- Slot 2: Studio Room Photo -->
+                <div class="image-box">
+                    <img src="studio.jpg" alt="Recording Studio Suite">
                 </div>
                 <div class="audio-box">
                     <strong>Listen to Ambient Melodies</strong><br>
@@ -183,10 +187,11 @@
                 <p class="content-text">An upcoming new author for the epic "Malbec Book Series" and the highly anticipated upcoming "Fallen Feather" fantasy fiction universe. Crafting sweeping tales of courtly intrigue, magic, and sweeping romance.</p>
             </div>
             <div>
-                <div class="feature-block" style="padding: 52px 15px;">
-                    📜 NOVEL COVER ART UNVEILING SOON
+                <!-- Slot 3: Book Cover -->
+                <div class="image-box">
+                    <img src="cover.jpg" alt="Malbec Sunsets Book Cover">
                 </div>
-                <div class="feature-block">
+                <div class="image-box" style="padding: 50px 0; background: #3A0F17; color: #DDBA6B; font-weight: bold;">
                     🎬 FEATURED BOOK TRAILER TEASER
                 </div>
             </div>
