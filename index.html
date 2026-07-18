@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Ivory Castles</title>
+    <!-- Imports Elegant Historical Serif Fonts Directly -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #3A0F17;
             color: #FDFBF7;
-            font-family: 'Garamond', serif;
+            font-family: 'Sorts Mill Goudy', 'Garamond', serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,21 +21,23 @@
         }
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px 30px 20px;
             width: 100%;
         }
         header h1 {
             color: #DDBA6B;
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin: 0;
             font-family: 'Playfair Display', serif;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         header p {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-style: italic;
-            margin: 10px 0 0 0;
+            margin: 12px 0 0 0;
             color: #C5A059;
+            font-family: 'Playfair Display', serif;
         }
         .container {
             display: flex;
@@ -39,48 +45,52 @@
             width: 90%;
             gap: 40px;
             margin-bottom: 40px;
+            align-items: stretch;
         }
         .column {
             flex: 1;
             background-color: #FDFBF7;
             color: #3A0F17;
-            padding: 30px;
+            padding: 35px;
             border-radius: 8px;
             border: 1px solid #C5A059;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
         }
         .column h2 {
             font-family: 'Playfair Display', serif;
             color: #3A0F17;
             margin-top: 0;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             text-align: center;
             border-bottom: 2px solid #C5A059;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
+            letter-spacing: 1px;
         }
         .column h3 {
             text-align: center;
             font-style: italic;
             color: #8B4F58;
             margin-top: -5px;
-            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-family: 'Playfair Display', serif;
         }
         .content-text {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         .image-box {
             width: 100%;
             border: 1px solid #C5A059;
             border-radius: 4px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             background-color: #f7f5f0;
             text-align: center;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .image-box img {
             width: 100%;
@@ -90,11 +100,36 @@
         .audio-box {
             background: #3A0F17;
             color: #FDFBF7;
-            padding: 15px;
-            border-radius: 4px;
+            padding: 20px 15px;
+            border-radius: 6px;
             text-align: center;
             border: 1px solid #DDBA6B;
-            margin-top: 10px;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .audio-box strong {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #DDBA6B;
+            letter-spacing: 0.5px;
+        }
+        audio {
+            width: 100%;
+            margin-top: 12px;
+        }
+        .trailer-box {
+            background-color: #3A0F17;
+            color: #DDBA6B;
+            border: 1px solid #C5A059;
+            border-radius: 6px;
+            padding: 30px 15px;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin-top: 15px;
         }
         .newsletter {
             max-width: 1200px;
@@ -107,11 +142,17 @@
             text-align: center;
             margin-bottom: 40px;
             box-sizing: border-box;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
         }
         .newsletter h2 {
             font-family: 'Playfair Display', serif;
             margin-top: 0;
             color: #3A0F17;
+            font-size: 2rem;
+        }
+        .newsletter p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
         }
         .newsletter input[type="email"] {
             padding: 12px;
@@ -120,6 +161,7 @@
             border: 1px solid #C5A059;
             border-radius: 4px;
             font-size: 1rem;
+            font-family: inherit;
         }
         .newsletter button {
             padding: 12px 24px;
@@ -131,9 +173,11 @@
             cursor: pointer;
             font-weight: bold;
             margin-left: 10px;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
         }
         footer {
-            padding: 30px;
+            padding: 40px;
             text-align: center;
             color: #DDBA6B;
             width: 100%;
@@ -143,9 +187,11 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
         }
         @media (max-width: 768px) {
-            .container { flex-direction: column; }
+            .container { flex-direction: column; gap: 30px; }
         }
     </style>
 </head>
@@ -157,7 +203,7 @@
     </header>
 
     <div class="container">
-        <!-- LINA CASTLE -->
+        <!-- LINA CASTLE COLUMN -->
         <div class="column">
             <div>
                 <h2>Lina Castle</h2>
@@ -165,22 +211,27 @@
                 <p class="content-text">Home of the Order of Romance podcast, blog, and vlog. Highlighting the upcoming book "Order of Romance: Chivalry, Charm & Chase". Dedicated to exploring timeless tropes, storytelling craft, and the ultimate creative journey.</p>
             </div>
             <div>
-                <!-- SLOT 1: FLORAL TITLE CARD -->
+                <!-- Slot 1: Floral Title Card -->
                 <div class="image-box">
                     <img src="image.jpg" alt="The Order of Romance Title Card">
                 </div>
-                <!-- SLOT 2: STUDIO PICTURE -->
+                <!-- Slot 2: Studio Room Photo -->
                 <div class="image-box">
                     <img src="file_00000000350871f5ba2966692e00252b.png" alt="Recording Studio Suite">
                 </div>
+                <!-- Restored Music Player Track Box -->
                 <div class="audio-box">
                     <strong>Listen to Ambient Melodies</strong><br>
-                    <small>Royalty Free Ambient Track by Pardeep Patel</small>
+                    <small style="color: #C5A059; display: block; margin-top: 4px;">Royalty Free Ambient Track by Pardeep Patel</small>
+                    <audio controls style="display: block;">
+                        <source src="track.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
             </div>
         </div>
 
-        <!-- CALLIOPE CASTLE -->
+        <!-- CALLIOPE CASTLE COLUMN -->
         <div class="column">
             <div>
                 <h2>Calliope Castle</h2>
@@ -188,12 +239,12 @@
                 <p class="content-text">An upcoming new author for the epic "Malbec Book Series" and the highly anticipated upcoming "Fallen Feather" fantasy fiction universe. Crafting sweeping tales of courtly intrigue, magic, and sweeping romance.</p>
             </div>
             <div>
-                <!-- SLOT 3: BOOK COVER -->
+                <!-- Slot 3: Book Cover Art (Full-Width Sizing) -->
                 <div class="image-box">
                     <img src="1784057355161.png" alt="Malbec Sunsets Book Cover">
                 </div>
-                <!-- SLOT 4: FEATURED TRAILER TEASER -->
-                <div class="image-box" style="padding: 40px 0; background: #3A0F17; color: #DDBA6B; font-weight: bold;">
+                <!-- Restored Featured Book Trailer Container -->
+                <div class="trailer-box">
                     🎬 FEATURED BOOK TRAILER TEASER
                 </div>
             </div>
@@ -209,7 +260,7 @@
 
     <footer>
         <a href="#">TikTok</a> · <a href="#">Instagram</a> · <a href="#">Goodreads</a>
-        <p style="margin-top: 20px; color: #666; font-size: 0.9rem;">&copy; 2026 THE IVORY CASTLES · ALL RIGHTS RESERVED</p>
+        <p style="margin-top: 25px; color: #8B4F58; font-size: 0.95rem; letter-spacing: 0.5px;">&copy; 2026 THE IVORY CASTLES · ALL RIGHTS RESERVED</p>
     </footer>
 
 </body>
