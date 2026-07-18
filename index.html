@@ -77,19 +77,15 @@
             border: 1px solid #C5A059;
             border-radius: 4px;
             margin-bottom: 15px;
-            background-color: #eee;
+            background-color: #f7f5f0;
             text-align: center;
             overflow: hidden;
         }
         .image-box img {
             width: 100%;
-            height: auto;
+            max-height: 350px;
+            object-fit: cover;
             display: block;
-        }
-        .placeholder-text {
-            padding: 40px 20px;
-            color: #666;
-            font-style: italic;
         }
         .audio-box {
             background: #3A0F17;
@@ -147,6 +143,9 @@
             margin: 0 15px;
             font-weight: bold;
         }
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
@@ -166,10 +165,10 @@
             </div>
             <div>
                 <div class="image-box">
-                    <div class="placeholder-text">[The Order of Romance Floral Title Card Graphic]</div>
+                    <img src="https://unsplash.com" alt="The Order of Romance">
                 </div>
                 <div class="image-box">
-                    <div class="placeholder-text">[Recording Studio Suite Photo with Chairs]</div>
+                    <img src="https://unsplash.com" alt="Recording Studio">
                 </div>
                 <div class="audio-box">
                     <strong>Listen to Ambient Melodies</strong><br>
@@ -187,10 +186,10 @@
             </div>
             <div>
                 <div class="image-box">
-                    <div class="placeholder-text">[Malbec Sunsets Book Cover Graphic]</div>
+                    <img src="https://unsplash.com" alt="Malbec Sunsets Cover">
                 </div>
-                <div class="image-box" style="padding: 60px 0;">
-                    <strong>Featured Book Trailer Teaser</strong>
+                <div class="image-box" style="padding: 60px 0; background: #3A0F17; color: #DDBA6B; font-weight: bold;">
+                    Featured Book Trailer Teaser
                 </div>
             </div>
         </div>
